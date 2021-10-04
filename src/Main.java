@@ -31,16 +31,23 @@ public class Main {
 ////////////////////////////////////////
         x = cifryRimckie(StrMassiv[0]);
         y = cifryRimckie(StrMassiv[1]);
-        rez = rezultat(str, x, y);
-        if (rez < 0) printRezult(textThrow1);
-        if ((x > 0 && y == 0) || (x == 0 && y > 0)) printRezult(textThrow2);
-        if (x > 0 && y > 0) printRezult("Rezultat = " + rezRimskiy(rez));
+        
+       if ((x > 0 && y == 0) || (x == 0 && y > 0)) printRezult(textThrow2);
+        if (x > 0 && y > 0){
+            rez = rezultat(str, x, y);
+            if (rez < 0) printRezult(textThrow1);
+            printRezult("Rezultat = " + rezRimskiy(rez));
+        }
 ////////////////////////////////////////
         x = cifryArabskie(StrMassiv[0]);
         y = cifryArabskie(StrMassiv[1]);
-        rez = rezultat(str, x, y);
-        if (x > 0 && y > 0) printRezult("Rezultat = " + rez);
+        
         if ((x > 0 && y == 0) || (x == 0 && y > 0)) printRezult(textThrow4);
+        if (x > 0 && y > 0) {
+            rez = rezultat(str, x, y);
+            printRezult("Rezultat = " + rez);
+        }
+        
     }
 
     ////==================================================
